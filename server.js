@@ -24,3 +24,5 @@ const sess = {
         db: sequelize
     })
 };
+
+//middleware
