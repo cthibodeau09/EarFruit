@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS earFruit_db;
 CREATE DATABASE earFruit_db;
+

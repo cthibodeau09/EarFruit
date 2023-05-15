@@ -21,6 +21,11 @@ User.init(
         primaryKey: true,
         autoIncrement: true
     },
+    //username column
+    username: {
+        types: DataTypes.STRING,
+        allowNull: false,
+    },
     //email column
     email: {
         type: DataTypes.STRING,
