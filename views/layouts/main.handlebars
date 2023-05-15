@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EarFruit</title>
+        <link rel="stylesheet" href="/public/css/jass.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+    </head>
+
+    <body>
+        <div class="">
+        <header class="">
+            <h1>EarFruit</h1>
+            <nav>
+                <!-- login and logout links-->
+                {{#if logged_in}}
+                <a href="/public/js/profile.js">profile</a>
+                <button class="no-button" id="logout">logout</button>
+                {{else}}
+                <a href="/public/js/login.js">login</a>
+                {{/if}}
+            </nav>
+        </header>
+
+        <main class="">
+    <!-- Render the sub layout -->
+      {{{ body }}}
+        </main>
+        <footer>
+
+        </footer>
+        </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/public/js/logout.js"></script>
+  {{/if}}
+    </body>
+
+</html>
