@@ -1,7 +1,7 @@
 const {Model, Datatypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-//Define the Playlist Model
+//Define the Track Model
 class Track extends Model {}
 
 //Define the tables
@@ -9,24 +9,24 @@ Track.init(
 {
     //id
     id: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
     //artist
     artist: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     //title
     title: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     //user_id
     user_id:{
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id',
