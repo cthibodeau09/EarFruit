@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const sequelize = require('../config/connection');
 
 //create our user model
