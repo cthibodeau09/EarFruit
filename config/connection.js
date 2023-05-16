@@ -22,7 +22,3 @@ async function search(query, type) {
     throw error;
   }
 }
-
-module.exports = {
-  search,
-};
