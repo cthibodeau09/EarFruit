@@ -1,0 +1,12 @@
+[
+    {
+      "name": "My Playlist 1",
+      "description": "This is my first playlist",
+      "tracks": [1, 2, 3]
+    },
+    {
+      "name": "My Playlist 2",
+      "description": "This is my second playlist",
+      "tracks": [4, 5, 6]
+    }
+  ]
