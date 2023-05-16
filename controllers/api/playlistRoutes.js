@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Track } = require('../../models');
+const { Playlist } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
-      const newTrack = await Track.create({
+      const newPlaylist = await Playlist.create({
         ...req.body,
         user_id: req.session.user_id,
       });
   
-      res.status(200).json(newTrack);
+      res.status(200).json(newPlaylist);
     } catch (err) {
       res.status(400).json(err);
     }
@@ -17,22 +17,22 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const trackData = await Track.destroy({
+      const playlistData = await Playlist.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
         },
       });
   
-      if (!trackData) {
-        res.status(404).json({ message: 'No tracks found with this id!' });
+      if (!playlistData) {
+        res.status(404).json({ message: 'No playlist found with this id!' });
         return;
       }
   
-      res.status(200).json(trackData);
+      res.status(200).json(playlistData);
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
-  module.exports = router;
+module.exports = router;
