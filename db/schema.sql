@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS earfruit_db;
-
-CREATE DATABASE earfruit_db;
+DROP DATABASE IF EXISTS earFruit_db;
+CREATE DATABASE earFruit_db;
