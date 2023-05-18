@@ -1,5 +1,4 @@
-
-
+//global variables need some focusing
 const bcrypt = require("bcrypt");
 const { Model, DataTypes } = require("sequelize");
 

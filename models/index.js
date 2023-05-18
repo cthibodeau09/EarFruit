@@ -1,4 +1,4 @@
-const User = require("./User").default;
+const User = require("./User");
 const Track = require("./Track");
 const Playlist = require("./Playlist");
 
