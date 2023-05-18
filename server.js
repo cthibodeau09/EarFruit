@@ -6,7 +6,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // create the connection to the DB
 const sequelize = require('./config/connection');
-const routes = require('./controllers');
+const trackRoutes = require('./controllers/api/trackRoutes'); // Import trackRoutes
 
 // create the express app
 const app = express();
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
 // Routes
-app.use(routes);
+app.use('/api/track', trackRoutes); // Mount trackRoutes under '/api/track' path
 
 // Start the server
 sequelize.sync({ force: false }).then(() => {
