@@ -30,7 +30,7 @@ async function search(query, type) {
       params: {
         q: query,
         // before demonstrating or testing, replaced with the current access token
-        token: discogsAccessToken,
+        token: PuTywyfYoWUqklKwSInJxtjyzEiZGGMrhTFCrQFo,
         type: type,
       },
     });
