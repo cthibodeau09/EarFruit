@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Playlist:</h3>
+
+    <form class="form new-playlist-form">
+      <div class="form-group">
+        <label for="playlist-name">playlist name:</label>
+        <input class="form-input" type="text" id="playlist-name" name="playlist-name" />
+      </div>
+      <div class="form-group">
+        <label for="playlist-desc">description:</label>
+        <textarea class="form-input" id="playlist-desc" name="playlist-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if playlist.length}}
+  <div class="col-md-6 playlist-list">
+    <h3>Current Playlists:</h3>
+
+    {{#each playlist as |pt|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="//{{playlist.id}}">{{playlist.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{playlist.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="/public/js/profile.js"></script>
