@@ -10,7 +10,7 @@ const helpers = require('./utils/helpers');
 
 // create the connection to the DB
 const sequelize = require('./config/connection');
-// const trackRoutes = require('./controllers/api/trackRoutes'); // Import trackRoutes
+const trackRoutes = require('./controllers/api/trackRoutes'); // Import trackRoutes
 
 // create the express app
 const app = express();
@@ -31,14 +31,16 @@ const sess = {
 // Middleware
 const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
+
 // Routes
-// app.use('/api/track', trackRoutes); // Mount trackRoutes under '/api/track' path
+app.use('/api/track', trackRoutes); // Mount trackRoutes under '/api/track' path
 app.use(require('./controllers/'))
 
 // Start the server
