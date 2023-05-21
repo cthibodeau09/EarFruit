@@ -6,9 +6,6 @@ const PuTywyfYoWUqklKwSInJxtjyzEiZGGMrhTFCrQFo = process.env.DISCOGS_ACCESS_TOKE
 
 let sequelizeInstance;
 
-console.log (process.env.DB_NAME)
-console.log (process.env.DB_USER)
-console.log (process.env.DB_PASSWORD)
 
 if (process.env.JAWSDB_URL) {
   sequelizeInstance = new Sequelize(process.env.JAWSDB_URL);
