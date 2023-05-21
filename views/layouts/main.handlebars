@@ -5,38 +5,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EarFruit</title>
-        <link rel="stylesheet" href="/public/css/jass.css">
-        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="./css/jass.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
         <div class="flex-column justify-space-around">
-        <header class="display-flex justify-space-between align-center p-2">
-            <span role="img" aria-label="music">🎵</span>
-            <h1>EarFruit</h1>
-            <nav>
+        <header class="display-flex justify -space-between align-center p-2">
+
+            <h1>
+                🎵EarFruit
+            </h1>
+
+            <nav class="shift">
                 <!-- login and logout links-->
                 {{#if logged_in}}
-                <a href="/public/js/profile.js">profile</a>
-                <button class="no-button" id="logout">logout</button>
+                <ul><a href="./js/profile.js">profile</a></ul>
+                <ul><a href="./js/logout.js">logout</button></ul>
                 {{else}}
-                <a href="/public/js/login.js">login</a>
+                <ul><a href="./js/login.js">login</a></ul>
                 {{/if}}
             </nav>
         </header>
 
-        <main class="container container-fluid mt-5">
+        <main class="main">
     <!-- Render the sub layout -->
       {{{ body }}}
         </main>
         <footer>
-
+        <p>© 2023 EarFruit</p>
         </footer>
         </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
+  <script src="./js/logout.js"></script>
   {{/if}}
     </body>
 
