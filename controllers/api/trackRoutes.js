@@ -19,9 +19,24 @@ router.get('/search', async (req, res) => {
       },
     });
 
-    const searchResults = response.data.results;
+    const searchResults = response.data.results.map((result) => {
+      let image;
+      if (result.cover_image) {
+        image = result.cover_image;
+      } else if (result.thumb) {
+        image = result.thumb;
+      } else {
+        image = ''; // Set a default image if no image is available
+      }
 
-    res.json(searchResults);
+      return {
+        title: result.title,
+        uri: result.uri,
+        image,
+      };
+    });
+
+    res.render('homepage', { searchResults, projects: [] });
   } catch (error) {
     console.error('Error searching:', error);
     res.status(500).json({ error: 'An error occurred during search.' });
