@@ -2,9 +2,13 @@ const axios = require('axios');
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-const discogsAccessToken = process.env.DISCOGS_ACCESS_TOKEN;
+const PuTywyfYoWUqklKwSInJxtjyzEiZGGMrhTFCrQFo = process.env.DISCOGS_ACCESS_TOKEN;
 
 let sequelizeInstance;
+
+console.log (process.env.DB_NAME)
+console.log (process.env.DB_USER)
+console.log (process.env.DB_PASSWORD)
 
 if (process.env.JAWSDB_URL) {
   sequelizeInstance = new Sequelize(process.env.JAWSDB_URL);
@@ -20,7 +24,7 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
-
+console.log (sequelizeInstance)
 module.exports = sequelizeInstance;
 
 // Example function to search for songs, albums, or artists using the Discogs API
