@@ -13,17 +13,15 @@
         <div class="flex-column justify-space-around">
         <header class="display-flex justify -space-between align-center p-2">
 
-            <h1>
-                🎵EarFruit
-            </h1>
+                <img class="image" src="./images/EarFruit.jpeg">
 
-            <nav class="shift">
+            <nav class="nav-bar">
                 <!-- login and logout links-->
                 {{#if logged_in}}
-                <ul><a href="./js/profile.js">profile</a></ul>
-                <ul><a href="./js/logout.js">logout</button></ul>
+                <ul><a href="./js/profile.js">Profile</a></ul>
+                <ul><a href="./js/logout.js">Logout</button></ul>
                 {{else}}
-                <ul><a href="./js/login.js">login</a></ul>
+                <ul><a href="./js/login.js">Login</a></ul>
                 {{/if}}
             </nav>
         </header>
@@ -32,9 +30,7 @@
     <!-- Render the sub layout -->
       {{{ body }}}
         </main>
-        <footer>
-        <p>© 2023 EarFruit</p>
-        </footer>
+        <footer>© 2023 EarFruit</footer>
         </div>
 
   <!-- Render script for logged in users only -->
