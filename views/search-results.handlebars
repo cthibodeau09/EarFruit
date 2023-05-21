@@ -1,0 +1,10 @@
+{{#if results}}
+  <h3>Search Results</h3>
+  <ul>
+    {{#each results}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No search results found.</p>
+{{/if}}
