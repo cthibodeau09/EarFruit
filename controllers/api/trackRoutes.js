@@ -7,41 +7,7 @@ const discogsAccessToken = process.env.DISCOGS_ACCESS_TOKEN;
 const withAuth = require('../../utils/auth');
 
 // Search tracks, artists, or albums
-router.get('/search', async (req, res) => {
-  try {
-    const { query, type } = req.query;
 
-    const response = await axios.get('https://api.discogs.com/database/search', {
-      params: {
-        q: query,
-        token: discogsAccessToken,
-        type,
-      },
-    });
-
-    const searchResults = response.data.results.map((result) => {
-      let image;
-      if (result.cover_image) {
-        image = result.cover_image;
-      } else if (result.thumb) {
-        image = result.thumb;
-      } else {
-        image = ''; // Set a default image if no image is available
-      }
-
-      return {
-        title: result.title,
-        uri: result.uri,
-        image,
-      };
-    });
-
-    res.render('homepage', { searchResults, track: [] });
-  } catch (error) {
-    console.error('Error searching:', error);
-    res.status(500).json({ error: 'An error occurred during search.' });
-  }
-});
 
 router.post('/', withAuth, async (req, res) => {
   try {
