@@ -1,14 +1,12 @@
 header {
     text-align: center;
     background: white;
-    color: Green;
-    font-size: large;
     border-bottom: Black;
     border-bottom-style: groove;
 }
 
 .image {
-    width: 20%;
+    width: 25%;
 }
 
 nav {
@@ -32,14 +30,16 @@ body {
 
 h2 {
     text-align: center;
-    margin: 10px;
-    padding: 5px;
 }
 .row {
     padding-top:80px;
 }
 .form-group {
     text-align: center;
+}
+
+.search-button {
+    margin-top: 20px;
 }
 
 footer {
