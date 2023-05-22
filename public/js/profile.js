@@ -19,13 +19,13 @@ const newFormHandler = async (event) => {
         alert('Failed to create playlist');
       }
     }
-  };
+};
   
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/playlists/${id}`, {
+      const response = await fetch(`/api/playlist/${id}`, {
         method: 'DELETE',
       });
   

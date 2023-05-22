@@ -31,8 +31,8 @@ const sess = {
 // Middleware
 const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -43,6 +43,7 @@ app.use(express.static('public/images'));
 // Routes
 app.use('/api/track', trackRoutes); // Mount trackRoutes under '/api/track' path
 app.use(require('./controllers/'))
+
 
 // Start the server
 sequelize.sync({ force: false }).then(() => {
