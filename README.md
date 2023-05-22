@@ -45,9 +45,25 @@ As a user, I should be able to log out of my account and securely end my session
 * sequelize
 
 ## Usage
+:desktop_computer:	
 
-## Credits
+##### Run following command at the root of question and answer the prompts: 
 
-## Features
+1. ```mysql -u root -p```
+2. ```source db/schema.sql```
+3. ```quite```
+4. ```npm run seed```
+5. ```npm start```
+
+##### To run with localhost 
+```node server.js```
 
 ## Demonstration 
+
+![Screenshot (44)](https://github.com/cthibodeau09/EarFruit/assets/121210332/eaf57003-a392-4e9d-a277-3a4b2dda53dc)
+
+## Links 
+
+https://github.com/cthibodeau09/EarFruit
+
+https://frozen-taiga-46736.herokuapp.com/
