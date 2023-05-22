@@ -1,60 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>EarFruit Playlists</title>
-        <style>
-            #playlist{
-                list-style: none;
-            }
-        #playlist li a{
-            color:
-            text-decoration: none;
-        }
-        #playlist .current-song a{
-            color:green;
-        }
+<div class="row">
+    <div class="col-auto">
+        <h2>EarFruit Playlists</h2>
+    </div>
+</div>
 
-        </style>
-    </head>
-    <body>
-        <audio src="" controls id="audioPlayer">
-            Sorry, your browser doesn't support html5!
-        </audio>
-        <ul id="playlist">
-            <li class="current-song"><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+<div class="container">
 
-            
+  <audio id="audio" preload="none" tabindex="0">
+    			<source src="" data-track-number="1" />
+    			<source src="" data-track-number="2" />
+    			<source src="" data-track-number="3" />
+    			<source src="" data-track-number="4" />
+    			<source src="" data-track-number="5" />    
+    			<source src="" data-track-number="6" />
+    			<source src="" data-track-number="7" />
+    			<source src="" data-track-number="8" />
+                <source src="" data-track-number="9" />
+                <source src="" data-track-number="10" />
+    			Your browser does not support HTML5 audio.
+    		</audio>
 
+  <div class="player">
 
+    <div class="large-toggle-btn">
+      <i class="large-play-btn"><span class="screen-reader-text">Large toggle button</span></i>
+    </div>
+    <!-- /.play-box -->
 
-        </ul>
-        <script src="https://code.jquery.com/jquery-2.2.0.js">
-        </script>
-        <script>
-            audioPlayer();
-            function audioPlayer( {
-                $("#audioPlayer") [0].src = $("#playlist li a") [0];
-                $("#audioPlayer")[0].play();
-                $
-            })
-        </script>
-    </body>
+    <div class="info-box">
+      <div class="track-info-box">
+        <div class="track-title-text"></div>
+        <div class="audio-time">
+          <span class="current-time">00:00</span> /
+          <span class="duration">00:00</span>
+        </div>
+      </div>
+      <!-- /.info-box -->
 
+      <div class="progress-box">
+        <div class="progress-cell">
+          <div class="progress">
+            <div class="progress-buffer"></div>
+            <div class="progress-indicator"></div>
+          </div>
+        </div>
+      </div>
 
+    </div>
+    <!-- /.progress-box -->
 
+    <div class="controls-box">
+      <i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
+      <i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
+    </div>
+    <!-- /.controls-box -->
 
+  </div>
+  <!-- /.player -->
 
+  <div class="play-list">
 
+    <div class="play-list-row" data-track-row="1">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        1.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="1"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="2">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        2.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="2"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="3">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        3.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="3"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="4">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        4.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="4"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="5">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        5.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="5"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="6">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        6.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="6"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="7">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        7.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="7"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="8">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        8.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="8"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="9">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        9.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="9"></a>
+      </div>
+    </div>
+    <div class="play-list-row" data-track-row="10">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        10.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track" href="#" data-play-track="10"></a>
+      </div>
+    </div>
 
-
-
-
-
-
-
-
-
-</html>
+  </div>
+<script src="/public/js/playlist.js"></script>
+</div>

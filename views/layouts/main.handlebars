@@ -18,10 +18,10 @@
             <nav class="nav-bar">
                 <!-- login and logout links-->
                 {{#if logged_in}}
-                <ul><a href="./js/profile.js">Profile</a></ul>
-                <ul><a href="./js/logout.js">Logout</button></ul>
+                <a href="/profile">Profile</a>
+                <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <ul><a href="./js/login.js">Login</a></ul>
+                <a href="/login">login</a>
                 {{/if}}
             </nav>
         </header>

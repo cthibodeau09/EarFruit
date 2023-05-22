@@ -36,7 +36,7 @@ router.get('/search', async (req, res) => {
       };
     });
 
-    res.render('homepage', { searchResults, projects: [] });
+    res.render('homepage', { searchResults, track: [] });
   } catch (error) {
     console.error('Error searching:', error);
     res.status(500).json({ error: 'An error occurred during search.' });
