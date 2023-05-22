@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EarFruit</title>
-        <link rel="stylesheet" href="./css/jass.css">
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarFruit</title>
+    <link rel="stylesheet" href="./css/jass.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
 
-    <body>
-        <div class="flex-column justify-space-around">
+<body>
+    <div class="flex-column justify-space-around">
         <header class="display-flex justify -space-between align-center p-2">
 
-                <img class="image" src="./images/EarFruit.jpeg">
+            <img class="image" src="./images/EarFruit.jpeg">
 
             <nav class="nav-bar">
                 <!-- login and logout links-->
@@ -26,17 +26,25 @@
             </nav>
         </header>
 
+        {{#if logged_in}}
+        <!-- Search form -->
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search..." />
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        {{/if}}
+
         <main class="main">
-    <!-- Render the sub layout -->
-      {{{ body }}}
+            <!-- Render the sub layout -->
+            {{{ body }}}
         </main>
         <footer>© 2023 EarFruit</footer>
-        </div>
+    </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="./js/logout.js"></script>
-  {{/if}}
-    </body>
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="./js/logout.js"></script>
+    {{/if}}
+</body>
 
 </html>

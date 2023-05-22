@@ -21,7 +21,7 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
-console.log (sequelizeInstance)
+// console.log (sequelizeInstance)
 module.exports = sequelizeInstance;
 
 // Example function to search for songs, albums, or artists using the Discogs API
