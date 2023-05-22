@@ -24,6 +24,11 @@ nav a {
     color:black; 
 }
 
+.center {
+    border: 5px solid;
+    text-align: center;
+}
+
 body {
     background-color: orange;
 }

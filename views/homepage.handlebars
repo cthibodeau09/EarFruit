@@ -14,9 +14,25 @@
       <a href="{{this.uri}}" target="_blank">View Details</a>
     </div>
   {{/each}}
+   {{#if logged_in}}
 {{else}}
   <p>No search results found.</p>
 {{/if}}
+{{/if}}
+<div class="center">
+<h1>This is our EarFruit Homepage</h1>
+
+<p>As a person who enjoys music, I want a space where I can share and see others music choices, so that I can discover other songs and music that I might enjoy</p>
+</div>
+
+
+
+
+
+
+
+
+
 
 <!-- Loop over each object in the projects array -->
 {{#each projects}}

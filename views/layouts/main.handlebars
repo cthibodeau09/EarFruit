@@ -10,6 +10,7 @@
 </head>
 
 <body>
+       
     <div class="flex-column justify-space-around">
         <header class="display-flex justify -space-between align-center p-2">
 
@@ -24,8 +25,12 @@
                 <a href="/login">login</a>
                 {{/if}}
             </nav>
+            <title> Welcome to EarFruit!</title>
         </header>
-
+<div class="container">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+       </div>
         {{#if logged_in}}
         <!-- Search form -->
         <form action="/search" method="GET">
@@ -34,10 +39,7 @@
         </form>
         {{/if}}
 
-        <main class="main">
-            <!-- Render the sub layout -->
-            {{{ body }}}
-        </main>
+     
         <footer>© 2023 EarFruit</footer>
     </div>
 
