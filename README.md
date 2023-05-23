@@ -60,7 +60,8 @@ As a user, I should be able to log out of my account and securely end my session
 
 ## Demonstration 
 
-![Screenshot (44)](https://github.com/cthibodeau09/EarFruit/assets/121210332/eaf57003-a392-4e9d-a277-3a4b2dda53dc)
+![Screenshot 2023-05-22 194452](https://github.com/cthibodeau09/EarFruit/assets/123923383/1ba508a8-8a2b-4762-b02d-bbd2954569e6)
+
 
 ## Links 
 
